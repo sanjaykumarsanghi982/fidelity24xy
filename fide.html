@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fidelity Customer Service &amp; Support</title>
+<style>
+  :root{
+    --fid-green:#368727;
+    --fid-dark:#1b3a1a;
+    --fid-light:#eaf5e7;
+    --text:#1a1a1a;
+    --muted:#5c6b5a;
+    --border:#d7e3d4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+  }
+  header{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    padding:18px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .logo-img{
+    height:38px;
+    width:auto;
+    max-width:220px;
+    display:block;
+    object-fit:contain;
+  }
+  .logo-mark{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--fid-green);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:22px;font-family:Georgia,serif;
+    flex-shrink:0;
+  }
+  .header-phone{
+    display:flex;align-items:center;gap:10px;
+    background:var(--fid-light);
+    border:1px solid var(--border);
+    border-radius:40px;
+    padding:9px 20px;
+    text-decoration:none;
+    color:var(--fid-dark);
+    font-weight:700;
+    font-size:16px;
+    transition:.15s ease;
+  }
+  .header-phone:hover{background:#dcefd7;}
+  .header-phone svg{width:18px;height:18px;fill:var(--fid-green);}
+
+  .hero{
+    background:linear-gradient(135deg,#1b3a1a 0%,#2c5a26 60%,#368727 100%);
+    color:#fff;
+    text-align:center;
+    padding:70px 20px 80px;
+  }
+  .hero h1{font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-1px;line-height:1.15;}
+  .hero p{max-width:620px;margin:18px auto 0;font-size:18px;opacity:.9;}
+
+  .call-box{
+    max-width:520px;
+    margin:-46px auto 0;
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 18px 50px rgba(0,0,0,.16);
+    padding:34px 28px;
+    text-align:center;
+    position:relative;
+    border:1px solid var(--border);
+  }
+  .call-box .label{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:700;
+    color:var(--muted);
+    margin-bottom:10px;
+  }
+  .call-box a.number{
+    display:block;
+    font-size:clamp(28px,6vw,40px);
+    font-weight:800;
+    color:var(--fid-green);
+    text-decoration:none;
+    letter-spacing:-1px;
+    line-height:1.1;
+  }
+  .call-box a.number:hover{text-decoration:underline;}
+  .call-box .hours{
+    margin-top:14px;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .call-box .note{
+    margin-top:16px;
+    font-size:13px;
+    color:var(--muted);
+    border-top:1px solid var(--border);
+    padding-top:14px;
+  }
+
+  main{max-width:960px;margin:0 auto;padding:60px 24px 20px;}
+  .section-title{
+    font-size:26px;font-weight:800;color:var(--fid-dark);
+    margin-bottom:8px;letter-spacing:-.5px;
+  }
+  .section-sub{color:var(--muted);margin-bottom:34px;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+    margin-bottom:60px;
+  }
+  .card{
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:26px 24px;
+    background:#fbfdfa;
+  }
+  .card h3{font-size:18px;color:var(--fid-dark);margin-bottom:8px;}
+  .card p{font-size:15px;color:var(--muted);margin-bottom:14px;}
+  .card a{
+    font-weight:700;font-size:14px;color:var(--fid-green);
+    text-decoration:none;
+  }
+  .card a:hover{text-decoration:underline;}
+
+  .faq{border-top:1px solid var(--border);padding-top:50px;margin-bottom:60px;}
+  details{
+    border-bottom:1px solid var(--border);
+    padding:18px 0;
+  }
+  details summary{
+    font-weight:700;cursor:pointer;font-size:16px;color:var(--fid-dark);
+    list-style:none;display:flex;justify-content:space-between;gap:16px;
+  }
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:"+";font-size:22px;color:var(--fid-green);line-height:1;}
+  details[open] summary::after{content:"–";}
+  details p{margin-top:12px;font-size:15px;color:var(--muted);}
+
+  .disclaimer{
+    background:var(--fid-light);
+    border-radius:14px;
+    padding:24px;
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:60px;
+  }
+
+  footer{
+    background:var(--fid-dark);
+    color:#cfe0ca;
+    text-align:center;
+    padding:34px 20px;
+    font-size:14px;
+  }
+  footer strong{color:#fff;}
+
+  @media(max-width:520px){
+    .hero{padding:50px 18px 70px;}
+    .call-box{padding:26px 18px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img class="logo-img"
+         src="https://logos-world.net/wp-content/uploads/2021/02/Fidelity-Symbol.jpg"
+         alt="Fidelity"
+         onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';">
+    <div class="logo-mark" id="logoFallback" style="display:none;">F</div>
+  </div>
+  <a class="header-phone" href="tel:+18886630257">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>
+    (888) 663-0257
+  </a>
+</header>
+
+<section class="hero">
+  <h1>We're here to help</h1>
+  <p>Speak with a Fidelity representative about your accounts, trading, transfers, and more — 24 hours a day, 7 days a week.</p>
+</section>
+
+<div class="call-box">
+  <div class="label">Customer Support Line</div>
+  <a class="number" href="tel:+18886630257">(888) 663-0257</a>
+  <div class="hours">Available 24/7 — including holidays</div>
+  <div class="note">Have your account number ready. For TTY service, dial 711.</div>
+</div>
+
+<main>
+
+  <h2 class="section-title">How can we help you today?</h2>
+  <p class="section-sub">Choose a topic below to get started.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Account Access</h3>
+      <p>Locked out, forgot your password, or need to reset your online credentials?</p>
+      <a href="tel:+18886630257">Call support →</a>
+    </div>
+    <div class="card">
+      <h3>Trading &amp; Orders</h3>
+      <p>Questions about an order, trade status, or platform issues?</p>
+      <a href="tel:+18886630257">Call support →</a>
+    </div>
+    <div class="card">
+      <h3>Transfers &amp; Deposits</h3>
+      <p>Check the status of a transfer or get help moving money between accounts.</p>
+      <a href="tel:+18886630257">Call support →</a>
+    </div>
+    <div class="card">
+      <h3>Statements &amp; Tax Forms</h3>
+      <p>Need a copy of a statement or your year-end tax documents?</p>
+      <a href="tel:+18886630257">Call support →</a>
+    </div>
+    <div class="card">
+      <h3>Fraud &amp; Security</h3>
+      <p>Report suspicious activity or a compromised account right away.</p>
+      <a href="tel:+18886630257">Call support →</a>
+    </div>
+    <div class="card">
+      <h3>Retirement Accounts</h3>
+      <p>IRA, 401(k) rollovers, and retirement planning questions.</p>
+      <a href="tel:+18886630257">Call support →</a>
+    </div>
+  </div>
+
+  <div class="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Quick answers to common questions.</p>
+
+    <details>
+      <summary>What are your support hours?</summary>
+      <p>Our customer service line is open 24 hours a day, 7 days a week. You can reach a live representative at (888) 663-0257 at any time.</p>
+    </details>
+    <details>
+      <summary>How do I reset my password?</summary>
+      <p>Call the support line and a representative will verify your identity and walk you through a secure reset.</p>
+    </details>
+    <details>
+      <summary>How long do transfers take?</summary>
+      <p>Timing depends on the transfer type and the institutions involved. Call us for a status update on a specific transfer.</p>
+    </details>
+    <details>
+      <summary>How do I report fraud?</summary>
+      <p>Call (888) 663-0257 immediately. Our fraud team is available around the clock and can freeze activity on your account.</p>
+    </details>
+    <details>
+      <summary>Can I get help outside the United States?</summary>
+      <p>Yes. International clients can call the same number; standard international rates may apply.</p>
+    </details>
+  </div>
+
+  <div class="disclaimer">
+    <strong>About this page:</strong> This is a customer service contact page. Fidelity and the Fidelity logo are trademarks of FMR LLC. Account features and hours may vary by product and region.
+  </div>
+
+</main>
+
+<footer>
+  <strong>Fidelity Customer Service</strong><br>
+  (888) 663-0257 &nbsp;•&nbsp; Available 24/7
+</footer>
+
+</body>
+</html>
